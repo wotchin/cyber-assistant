@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Cyber Assistant",
+    "description": "Cyber Assistant is a Chrome extension that allows you to save selected content and use OpenAI to generate insights.",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "contextMenus",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "assets/icon.png",
+            "48": "assets/icon.png",
+            "128": "assets/icon.png"
+        }
+    }
+}
