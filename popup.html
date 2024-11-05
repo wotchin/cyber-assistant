@@ -8,10 +8,21 @@
 <body>
   <div id="content">
     <div class="session-controls">
-      <select id="sessionSelect"></select>
-      <button id="newSession">New Session</button>
-      <button id="deleteSession">Delete Session</button>
-      <button id="renameSession">Rename Session</button>
+      <select id="sessionSelect" class="session-select"></select>
+      <div class="button-group">
+        <button id="newSession" class="primary-btn">
+          <span class="btn-icon">+</span>
+          New Session
+        </button>
+        <div class="secondary-buttons">
+          <button id="renameSession" class="secondary-btn">Rename</button>
+          <button id="deleteSession" class="danger-btn">Delete</button>
+        </div>
+      </div>
+      <button id="openChat" class="chat-btn">
+        <span class="btn-icon">💬</span>
+        Chat with AI
+      </button>
     </div>
     <div id="sessionContent"></div>
     <div class="settings-link">

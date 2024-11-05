@@ -1,42 +1,188 @@
 body {
-    width: 400px;
-    padding: 15px;
-    font-family: Arial, sans-serif;
+    width: 380px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #ffffff;
+    color: #333333;
+}
+
+#content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 .session-controls {
-    margin-bottom: 15px;
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
-#sessionSelect {
-    flex: 1;
-    padding: 5px;
+.session-select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8f9fa;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.session-select:focus {
+    border-color: #2196f3;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.secondary-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
 }
 
 button {
-    padding: 5px 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
-.settings-link {
-    margin-top: 15px;
-    text-align: right;
+.primary-btn {
+    background: #2196f3;
+    color: white;
+    width: 100%;
+}
+
+.secondary-btn {
+    background: #4caf50;
+    color: white;
+    flex: 1;
+}
+
+.danger-btn {
+    background: #f44336;
+    color: white;
+    flex: 1;
+}
+
+.btn-icon {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#sessionContent {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 0;
 }
 
 .session-item {
-    background: #f5f5f5;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
+    background: #f8f9fa;
+    padding: 16px;
+    margin: 8px 0;
+    border-radius: 8px;
     position: relative;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: all 0.2s ease;
+}
+
+.session-item:hover {
+    border-color: #2196f3;
+    background: #f5f9ff;
 }
 
 .session-item .delete-btn {
     position: absolute;
-    right: 5px;
-    top: 5px;
-    cursor: pointer;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff5252;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.session-item:hover .delete-btn {
+    opacity: 1;
+}
+
+.settings-link {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+}
+
+.settings-link a {
+    color: #2196f3;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.settings-link a:hover {
+    background: #f5f9ff;
+    text-decoration: none;
+}
+
+/* 自定义滚动条样式 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* 在现有的 styles.css 中添加以下样式 */
+.chat-btn {
+    background: #673ab7;
+    color: white;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.chat-btn:hover {
+    background: #5e35b1;
 }
   

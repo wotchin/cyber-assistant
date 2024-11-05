@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <button id="backButton" class="back-btn">←</button>
+            <h2>Chat with AI</h2>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be inserted here -->
+        </div>
+        <div class="chat-input-container">
+            <textarea 
+                id="userInput" 
+                placeholder="Type your message here..." 
+                rows="1"
+                class="chat-input"
+            ></textarea>
+            <button id="sendMessage" class="send-btn">
+                <span class="send-icon">↑</span>
+            </button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html> 

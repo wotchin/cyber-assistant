@@ -107,5 +107,25 @@ document.addEventListener('DOMContentLoaded', async () => {
             alert('该会话名称已存在！');
         }
     });
+
+    document.getElementById('openChat').addEventListener('click', function() {
+        // 保存当前会话ID
+        chrome.storage.local.set({ 'currentSession': document.getElementById('sessionSelect').value }, function() {
+            // 使用 chrome.windows.create 在新窗口中打开聊天界面
+            chrome.windows.create({
+                url: chrome.runtime.getURL('chat.html'),
+                type: 'popup',
+                width: 800,
+                height: 600,
+                left: (screen.width - 800) / 2,
+                top: (screen.height - 600) / 2
+            });
+        });
+    });
+
+    document.getElementById('openSettings').addEventListener('click', function(e) {
+        e.preventDefault();
+        chrome.runtime.openOptionsPage();
+    });
 });
   
